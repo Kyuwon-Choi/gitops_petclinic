@@ -1,6 +1,5 @@
 # ---- Build stage ----
-FROM eclipse-temurin:17-jdk-jammy AS builder
-LABEL maintainer="kyuwon30@naver.com" 
+FROM eclipse-temurin:17-jdk-jammy AS builder 
 WORKDIR /app
 COPY . .
 RUN chmod +x mvnw && ./mvnw clean package -DskipTests
